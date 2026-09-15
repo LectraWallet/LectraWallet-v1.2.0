@@ -40,13 +40,15 @@ pnpm build
 1. Fork or clone this repository.
 2. Sign in to [Vercel](https://vercel.com/).
 3. Select **Add New Project** and import the GitHub repository.
-4. Vercel should detect the Vite project automatically.
-5. Use these build settings if Vercel asks:
-   - Install command: `pnpm install`
-   - Build command: `pnpm build`
-   - Output configuration: use the project defaults; the included build produces the frontend and server bundle.
-6. Deploy the project.
-7. Open the HTTPS deployment URL and verify the source, domain, and browser permissions before creating or restoring a wallet.
+4. Vercel should detect the Vite project automatically. The repository includes `vercel.json` with the correct static deployment settings.
+5. If Vercel asks for settings, use:
+   - Install command: `pnpm install --frozen-lockfile`
+   - Build command: `pnpm build:vercel`
+   - Output directory: `dist/public`
+   - Framework preset: `Vite`
+6. Do not use `pnpm build` for Vercel. That command also bundles `server/index.ts` for traditional Node hosting. If Vercel displays the contents of `server/index.ts`, it is serving the server bundle instead of `dist/public/index.html`.
+7. Deploy the project.
+8. Open the HTTPS deployment URL and verify the source, domain, and browser permissions before creating or restoring a wallet.
 
 For a production deployment, pin dependencies, enable GitHub branch protection, review Vercel project members and tokens, and use a custom domain with HTTPS. Never put a recovery phrase, password, private key, or wallet export in Vercel environment variables, GitHub issues, logs, screenshots, or commits.
 
