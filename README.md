@@ -59,22 +59,14 @@ For a production deployment, pin dependencies, enable GitHub branch protection, 
 - Local AES-GCM encryption of the recovery phrase
 - Native SegWit address derivation
 - Receive address and QR code
-- Multiple BIP-84 receiving and change addresses with persisted rotation indices
 - Camera QR scanner for Bitcoin recipients
-- Network-aware checksum validation for Bitcoin addresses and Bitcoin URI parsing
-- Confirmed-only UTXO selection with bounded low-waste search, dust-change handling, and script-aware fee estimates
-- Economy, normal, priority, and custom sat/vB fee controls
-- Mandatory transaction review before local signing or hardware-wallet PSBT verification
-- Transaction history with confirmation counts and explorer links
 - BTC/USD live price display with fallback polling
 - Balance refresh and plain prototype interface
 - Daily local performance snapshot and Stats view
-- AES-GCM vault v3 with authenticated metadata, PBKDF2-HMAC-SHA-256 at 600,000 iterations, secure-context checks, background locking, and tamper detection
-- Locked dependency graph, source security checks, release integrity manifest, and automated compatibility tests
 
 ## Limitations
 
-The project is still not production-ready wallet software and has not received an independent security audit. It does not replace an audited hardware wallet or established wallet application. Hardware support is standards-based PSBT import/export rather than direct vendor USB transport. A malicious browser extension, compromised device, compromised deployment account, or modified release can still defeat a browser wallet's trust model. Use test funds only until independent cryptographic, application-security, recovery-compatibility, and deployment reviews are complete.
+The project is not production-ready wallet software. It does not replace an audited hardware wallet or established wallet application. Transaction fees, UTXO selection, broadcast behavior, public API availability, address validation, browser storage, and device security require further review and testing.
 
 ## License
 
