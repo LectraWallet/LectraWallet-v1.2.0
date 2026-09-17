@@ -2,11 +2,6 @@
 
 Lectra Wallet is a Bitcoin-only, browser-based self-custody wallet prototype. It derives a native SegWit Bitcoin address from a BIP-39 recovery phrase, encrypts the phrase locally in the browser, displays the current BTC/USD price, supports receiving and sending native Bitcoin, and includes recovery-phrase copy/paste and camera QR scanning.
 
-## Important warning
-
-This is a prototype and has not been independently audited. Do not use it with meaningful funds. The recovery phrase controls the wallet: anyone who obtains it can spend the bitcoin, and losing it can permanently prevent recovery. Review the transaction-building, address-validation, dependency, browser-security, and backup behavior before using real funds.
-
-Always test with a small amount first. Use only native Bitcoin mainnet when sending to a mainnet `bc1...` address. Do not send wrapped BTC, tokens on another chain, or testnet coins to a mainnet address.
 
 ## Browser-only self-custody
 
